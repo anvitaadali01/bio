@@ -1,0 +1,34 @@
+a. Role of Seq Class in Biopython
+
+The Seq class in Biopython is used to represent and manipulate biological sequences such as DNA, RNA, and proteins. It provides various built-in methods that simplify sequence analysis in bioinformatics.
+
+Sequence Operations and Their Importance
+
+1. Slicing
+Slicing is used to extract a specific portion of a biological sequence. It helps researchers analyze genes, motifs, or regions of interest within a long DNA or RNA sequence.
+
+2. Concatenation
+Concatenation combines two or more sequences into a single sequence. This is useful in genome assembly and sequence construction.
+
+3. Transcription
+Transcription converts a DNA sequence into an RNA sequence by replacing thymine (T) with uracil (U). It helps in studying gene expression and RNA analysis.
+
+4. Translation
+Translation converts an RNA or DNA sequence into a protein sequence based on codons. This is important for identifying amino acid sequences and studying protein synthesis.
+
+Thus, the Seq class provides efficient tools for performing common biological sequence operations required in bioinformatics research and analysis.
+
+
+b. Python Script to Read FASTA File
+
+from Bio import SeqIO
+
+def read_fasta(file_path):
+    for record in SeqIO.parse(file_path, "fasta"):
+        print("Description:", record.description)
+        print("Sequence:", record.seq)
+        print()
+
+fasta_file = "example.fasta" #path
+
+read_fasta(fasta_file)
